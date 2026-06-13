@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,69 +6,25 @@
 </head>
 <body>
     <h1>Dünya Mutluluk Endeksi Analiz Raporu</h1>
-    
-    <p>=== DÜNYA MUTLULUK ENDEKSİ ANALİZ RAPORU ===</p>
-    <p>Bu çalışmada, 2017, 2018 ve 2019 yıllarına ait Dünya Mutluluk Raporu incelenmiştir.</p>
 
-    <h3>Veri Setinin İlk 5 Satırı</h3>
-    <pre>
-          Ülke  Mutluluk_Skoru  Ekonomi_GDP  Sağlık_Yaşam
-0        Norway         7.537     1.616463      0.796667
-1       Denmark         7.522     1.482383      0.792566
-2       Iceland         7.504     1.480633      0.833552
-3   Switzerland         7.494     1.564980      0.858131
-4       Finland         7.469     1.443572      0.809158
+    <h3>Grafik 1: Veri Analizi</h3>
+    <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc;">
+# Grafik 1: Mutluluk Puanı Dağılımı
+plt.hist(df['Mutluluk_Skoru'])
+plt.title('Mutluluk Puanı Dağılımı')
+plt.show()
     </pre>
+    <img src="grafik1.png" width="600">
+    <p><b>Yorum:</b> Mutluluk skorlarının dağılımı burada görülmektedir.</p>
 
-    <h3>İstatistiksel Özetler</h3>
-    <pre>
-1. Veri Seti Matematiksel Özeti:
-        Mutluluk_Skoru  Ekonomi_GDP  Sağlık_Yaşam
-count      467.000000   467.000000    467.000000
-mean         5.379064     0.926981      0.624800
-std          1.119092     0.405078      0.252756
-min          2.693000     0.000000      0.000000
-25%          4.511500     0.628203      0.454714
-50%          5.339000     0.986000      0.657000
-75%          6.170500     1.245000      0.817500
-max          7.769000     2.096000      1.141000
-
-2. En Yüksek Mutluluk Skoru: 7.769
-3. En Düşük Mutluluk Skoru: 2.69300007820129
-
-4. Değişkenlerin Birbiriyle İlişkisi (Korelasyon):
-                Mutluluk_Skoru  Ekonomi_GDP  Sağlık_Yaşam
-Mutluluk_Skoru        1.000000     0.797052      0.750628
-Ekonomi_GDP           0.797052     1.000000      0.781642
-Sağlık_Yaşam          0.750628     0.781642      1.000000
+    <h3>Grafik 2: Ekonomi Analizi</h3>
+    <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc;">
+# Grafik 2: Ekonomi ve Mutluluk İlişkisi
+plt.scatter(df['Ekonomi_GDP'], df['Mutluluk_Skoru'])
+plt.title('Ekonomi vs Mutluluk')
+plt.show()
     </pre>
-
-    <h3>Bulgular ve Yorumlar</h3>
-    <ul>
-        <li>Yorum 1: Mutluluk skorlarının çoğunlukla 4.5 ile 6 puan arasında yoğunlaştığı görülmektedir.</li>
-        <li>Yorum 2: Kutu grafiği incelendiğinde medyan değerinin 5.5 civarında olduğu anlaşılır.</li>
-        <li>Yorum 3: Ekonomik güç (GDP) arttıkça mutluluk skorunun da arttığı doğrusal olarak gözlemlenmektedir.</li>
-        <li>Yorum 4: Sağlıklı yaşam süresi beklentisi yüksek olan ülkelerin mutluluk seviyeleri de daha yüksektir.</li>
-        <li>Yorum 5: Isı haritasına göre, mutluluk skoru ile ekonomi ve sağlık değişkenleri arasında güçlü pozitif bir ilişki vardır.</li>
-    </ul>
-
-    <h3>Bulgular ve Sonuç</h3>
-    <ul>
-        <li>Bulgu 1: Dünyadaki mutluluk dağılımı dengeli bir yayılım göstermektedir; aşırı uç değerler azınlıktadır.</li>
-        <li>Bulgu 2: Maddi refah (GDP) arttıkça insanların mutluluk puanı doğrudan yükselmektedir.</li>
-        <li>Bulgu 3: Kaliteli sağlık hizmetlerine erişim ve uzun yaşam süresi, toplumsal mutluluğu en çok tetikleyen ikinci büyük etkendir.</li>
-    </ul>
-    
-    <h2>Grafiklerimiz</h2>
-    <img src="grafik1.png" width="600"><br>
-    <p>Yorum: Dünya mutluluk skorlarının genel dağılımı bu histogram ile görülmektedir.</p>
-    <img src="grafik2.png" width="600"><br>
-    <p>Yorum: Bu grafik, seçilen iki değişken arasındaki ilişkiyi analiz etmektedir.</p>
-    <img src="grafik3.png" width="600"><br>
-    <p>Yorum: Verilerdeki değişim eğilimleri bu görsel ile ortaya konmuştur.</p>
-    <img src="grafik4.png" width="600"><br>
-    <p>Yorum: Bu grafik, değişkenler arasındaki karşılaştırmalı değerleri göstermektedir.</p>
-    <img src="grafik5.png" width="600"><br>
-    <p>Yorum: Son analizimiz, değişkenlerin genel eğilimi ve sonuçları destekleyen bir yapıdadır.</p>
+    <img src="grafik2.png" width="600">
+    <p><b>Yorum:</b> Ekonomik güç ile mutluluk arasında pozitif bir ilişki vardır.</p>
 </body>
 </html>
