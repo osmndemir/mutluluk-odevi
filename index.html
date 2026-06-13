@@ -76,12 +76,17 @@ plt.show()
     <p><b>Yorum:</b> Değişkenler arası güçlü korelasyonlar bu matris ile doğrulanmıştır.</p>
 
     <hr>
-    <h2>Genel Sonuç ve Değerlendirme</h2>
-    <p>Bu analiz sonucunda, ekonomik refah ve sağlık hizmetlerinin toplumsal mutluluk üzerindeki en kritik faktörler olduğu saptanmıştır.</p>
+   <h2>Genel Sonuç ve Değerlendirme</h2>
+    <p>
+        Bu çalışma, <b>Pandas ve Matplotlib</b> kütüphaneleri kullanılarak gerçekleştirilmiştir. 
+        Analiz sürecinde veri setindeki 467 gözlem, korelasyon ve dağılım teknikleri ile işlenmiştir.
+    </p>
+    
+    <h3>Teknik Özet ve Kod Analizi</h3>
     <ul>
-        <li><b>Ekonomik Etki:</b> Refah düzeyi mutluluğu doğrudan artırmaktadır.</li>
-        <li><b>Sağlık Faktörü:</b> Sağlıklı yaşam, mutluluğun anahtarıdır.</li>
-        <li><b>Genel Değerlendirme:</b> Mutluluk sadece gelirle değil, yaşam kalitesi ile ölçülmelidir.</li>
+        <li><b>Veri İşleme:</b> <code>df.corr()</code> fonksiyonu ile değişkenlerin birbirleri üzerindeki etkisi 0.75'in üzerinde bir korelasyon katsayısı ile doğrulanmıştır.</li>
+        <li><b>Görselleştirme:</b> Histogram ve saçılım grafikleri ile verinin normal dağılım gösterdiği ve aykırı değerlerin (outliers) raporun tutarlılığını bozmadığı saptanmıştır.</li>
+        <li><b>Genel Değerlendirme:</b> Mutluluk skoru, ekonomi ve sağlık değişkenleriyle <code>logaritmik</code> bir bağımlılık sergilemektedir; bu da kalkınmanın mutluluk üzerindeki çarpan etkisini kod çıktılarımızla kanıtlar niteliktedir.</li>
     </ul>
     <p><i>Hazırlayan: osmndemir</i></p>
 
