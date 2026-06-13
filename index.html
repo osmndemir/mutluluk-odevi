@@ -1,30 +1,60 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mutluluk Analiz Raporu</title>
+    <title>Dünya Mutluluk Endeksi Analiz Raporu</title>
 </head>
 <body>
     <h1>Dünya Mutluluk Endeksi Analiz Raporu</h1>
 
-    <h3>Grafik 1: Veri Analizi</h3>
-    <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc;">
+    <h3>Grafik 1: Mutluluk Puanı Dağılımı</h3>
+    <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc; border-radius: 6px;">
 # Grafik 1: Mutluluk Puanı Dağılımı
 plt.hist(df['Mutluluk_Skoru'])
 plt.title('Mutluluk Puanı Dağılımı')
 plt.show()
     </pre>
     <img src="grafik1.png" width="600">
-    <p><b>Yorum:</b> Mutluluk skorlarının dağılımı burada görülmektedir.</p>
+    <p><b>Yorum:</b> Mutluluk skorlarının genel dağılımı bu histogram ile görülmektedir.</p>
 
-    <h3>Grafik 2: Ekonomi Analizi</h3>
-    <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc;">
+    <h3>Grafik 2: Ekonomi ve Mutluluk İlişkisi</h3>
+    <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc; border-radius: 6px;">
 # Grafik 2: Ekonomi ve Mutluluk İlişkisi
 plt.scatter(df['Ekonomi_GDP'], df['Mutluluk_Skoru'])
 plt.title('Ekonomi vs Mutluluk')
 plt.show()
     </pre>
     <img src="grafik2.png" width="600">
-    <p><b>Yorum:</b> Ekonomik güç ile mutluluk arasında pozitif bir ilişki vardır.</p>
+    <p><b>Yorum:</b> Ekonomik güç arttıkça mutluluk skorunun da arttığı gözlemlenmektedir.</p>
+
+    <h3>Grafik 3: Sağlık ve Mutluluk İlişkisi</h3>
+    <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc; border-radius: 6px;">
+# Grafik 3: Sağlıklı Yaşam ve Mutluluk
+plt.scatter(df['Sağlık_Yaşam'], df['Mutluluk_Skoru'])
+plt.title('Sağlıklı Yaşam vs Mutluluk')
+plt.show()
+    </pre>
+    <img src="grafik3.png" width="600">
+    <p><b>Yorum:</b> Sağlık hizmetlerine erişim, toplumsal mutluluğu doğrudan etkilemektedir.</p>
+
+    <h3>Grafik 4: Değişkenlerin Dağılımı</h3>
+    <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc; border-radius: 6px;">
+# Grafik 4: Değişkenlerin Kutu Grafiği
+plt.boxplot(df['Mutluluk_Skoru'])
+plt.title('Mutluluk Skoru Dağılımı')
+plt.show()
+    </pre>
+    <img src="grafik4.png" width="600">
+    <p><b>Yorum:</b> Verilerdeki medyan ve uç değerler bu grafik ile analiz edilmiştir.</p>
+
+    <h3>Grafik 5: Korelasyon Analizi</h3>
+    <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc; border-radius: 6px;">
+# Grafik 5: Isı Haritası (Korelasyon)
+sns.heatmap(df.corr(), annot=True)
+plt.title('Korelasyon Matrisi')
+plt.show()
+    </pre>
+    <img src="grafik5.png" width="600">
+    <p><b>Yorum:</b> Değişkenler arasındaki güçlü pozitif ilişkiyi doğrulamaktadır.</p>
+
 </body>
 </html>
