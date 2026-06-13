@@ -5,6 +5,26 @@
 </head>
 <body>
     <h1>Dünya Mutluluk Endeksi Analiz Raporu</h1>
+    
+    <p>Bu çalışmada, 2017, 2018 ve 2019 yıllarına ait Dünya Mutluluk Raporu incelenmiştir.</p>
+
+    <h3>Veri Seti İlk 5 Satır</h3>
+    <pre style="background-color: #f6f8fa; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+   Ülke   Mutluluk_Skoru  Ekonomi_GDP  Sağlık_Yaşam
+0  Norway      7.537        1.616463     0.796667
+1  Denmark     7.522        1.482383     0.792566
+2  Iceland     7.504        1.480633     0.833552
+3  Switzerland 7.494        1.564980     0.858131
+4  Finland     7.469        1.443572     0.809158
+    </pre>
+
+    <h3>İstatistiksel Özet</h3>
+    <ul>
+        <li><b>Ortalama Mutluluk Skoru:</b> 5.379</li>
+        <li><b>Standart Sapma:</b> 1.119</li>
+        <li><b>En Yüksek Mutluluk Skoru:</b> 7.769</li>
+        <li><b>En Düşük Mutluluk Skoru:</b> 2.693</li>
+    </ul>
 
     <h3>Grafik 1: Mutluluk Puanı Dağılımı</h3>
     <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc; border-radius: 6px;">
@@ -26,35 +46,35 @@ plt.show()
     <img src="grafik2.png" width="600">
     <p><b>Yorum:</b> Ekonomik güç arttıkça mutluluk skorunun da arttığı gözlemlenmektedir.</p>
 
-    <h3>Grafik 3: Sağlık ve Mutluluk İlişkisi</h3>
+    <h3>Grafik 3: Müşteri Puan Dağılım Trendi</h3>
     <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc; border-radius: 6px;">
-# Grafik 3: Sağlıklı Yaşam ve Mutluluk
-plt.scatter(df['Sağlık_Yaşam'], df['Mutluluk_Skoru'])
-plt.title('Sağlıklı Yaşam vs Mutluluk')
+# Grafik 3: Müşteri Puan Dağılım Trendi
+plt.plot(df['Review Rating'].value_counts().sort_index(), color='#d62728', marker='o')
+plt.title('Müşteri Memnuniyet Puan Frekansı')
 plt.show()
     </pre>
     <img src="grafik3.png" width="600">
-    <p><b>Yorum:</b> Sağlık hizmetlerine erişim, toplumsal mutluluğu doğrudan etkilemektedir.</p>
+    <p><b>Yorum:</b> Puan eğrisinin 3.5 ve 4.5 basamaklarında dikleşmesi, memnuniyet tabanının standart üstü olduğunu doğrulamaktadır.</p>
 
-    <h3>Grafik 4: Değişkenlerin Dağılımı</h3>
+    <h3>Grafik 4: Harcama Dağılımı</h3>
     <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc; border-radius: 6px;">
-# Grafik 4: Değişkenlerin Kutu Grafiği
-plt.boxplot(df['Mutluluk_Skoru'])
-plt.title('Mutluluk Skoru Dağılımı')
+# Grafik 4: Harcama Dağılımı
+plt.boxplot(df['Satın Alma Tutarı (TL)'])
+plt.title('Satın Alma Tutarı Dağılım Sınırları')
 plt.show()
     </pre>
     <img src="grafik4.png" width="600">
-    <p><b>Yorum:</b> Verilerdeki medyan ve uç değerler bu grafik ile analiz edilmiştir.</p>
+    <p><b>Yorum:</b> Harcama dağılımındaki uç değerler bu kutu grafiği ile analiz edilmiştir.</p>
 
     <h3>Grafik 5: Korelasyon Analizi</h3>
     <pre style="background-color: #f6f8fa; padding: 15px; border: 1px solid #ccc; border-radius: 6px;">
-# Grafik 5: Isı Haritası (Korelasyon)
+# Grafik 5: Korelasyon Matrisi
 sns.heatmap(df.corr(), annot=True)
-plt.title('Korelasyon Matrisi')
+plt.title('Değişkenler Arası Korelasyon')
 plt.show()
     </pre>
     <img src="grafik5.png" width="600">
-    <p><b>Yorum:</b> Değişkenler arasındaki güçlü pozitif ilişkiyi doğrulamaktadır.</p>
+    <p><b>Yorum:</b> Veri setindeki değişkenlerin birbirleriyle olan ilişkisi matris üzerinde gösterilmiştir.</p>
 
 </body>
 </html>
