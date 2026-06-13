@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mutluluk Analiz Raporu</title>
+</head>
+<body>
+    <h1>Dünya Mutluluk Endeksi Analiz Raporu</h1>
+    <p>=== DÜNYA MUTLULUK ENDEKSİ ANALİZ RAPORU ===
+Bu çalışmada, 2017, 2018 ve 2019 yıllarına ait Dünya Mutluluk Raporu incelenmiştir.
+
+--- Veri Setinin İlk 5 Satırı ---
+          Ülke  Mutluluk_Skoru  Ekonomi_GDP  Sağlık_Yaşam
+0       Norway           7.537     1.616463      0.796667
+1      Denmark           7.522     1.482383      0.792566
+2      Iceland           7.504     1.480633      0.833552
+3  Switzerland           7.494     1.564980      0.858131
+4      Finland           7.469     1.443572      0.809158
+
+=== İSTATİSTİKSEL ÖZETLER ===
+
+1. Veri Seti Matematiksel Özeti:
+       Mutluluk_Skoru  Ekonomi_GDP  Sağlık_Yaşam
+count      467.000000   467.000000    467.000000
+mean         5.379064     0.926981      0.624800
+std          1.119092     0.405078      0.252756
+min          2.693000     0.000000      0.000000
+25%          4.511500     0.628203      0.454714
+50%          5.339000     0.986000      0.657000
+75%          6.170500     1.245000      0.817500
+max          7.769000     2.096000      1.141000
+
+2. En Yüksek Mutluluk Skoru: 7.769
+3. En Düşük Mutluluk Skoru: 2.69300007820129
+
+4. Değişkenlerin Birbiriyle İlişkisi (Korelasyon):
+                Mutluluk_Skoru  Ekonomi_GDP  Sağlık_Yaşam
+Mutluluk_Skoru        1.000000     0.797052      0.750628
+Ekonomi_GDP           0.797052     1.000000      0.781642
+Sağlık_Yaşam          0.750628     0.781642      1.000000
+
+=== GRAFİKLER ÇİZİLİYOR ===
+
+ 
+Important
+Figures are displayed in the Plots pane by default. To make them also appear inline in the console, you need to uncheck "Mute inline plotting" under the options menu of Plots.
+ 
+Yorum 1: Mutluluk skorlarının çoğunlukla 4.5 ile 6 puan arasında yoğunlaştığı görülmektedir.
+Yorum 2: Kutu grafiği incelendiğinde medyan değerinin 5.5 civarında olduğu anlaşılır.
+Yorum 3: Ekonomik güç (GDP) arttıkça mutluluk skorunun da arttığı doğrusal olarak gözlemlenmektedir.
+Yorum 4: Sağlıklı yaşam süresi beklentisi yüksek olan ülkelerin mutluluk seviyeleri de daha yüksektir.
+Yorum 5: Isı haritasına göre, mutluluk skoru ile ekonomi ve sağlık değişkenleri arasında güçlü pozitif bir ilişki vardır.
+
+=== BULGULAR VE SONUÇ ===
+* Bulgu 1: Dünyadaki mutluluk dağılımı dengeli bir yayılım göstermektedir; aşırı uç değerler azınlıktadır.
+* Bulgu 2: Maddi refah (GDP) arttıkça insanların mutluluk puanı doğrudan yükselmektedir.
+* Bulgu 3: Kaliteli sağlık hizmetlerine erişim ve uzun yaşam süresi, toplumsal mutluluğu en çok tetikleyen ikinci büyük etkendir.</p>
+    
+    <h2>Grafiklerimiz</h2>
+    <img src="grafik1.png" width="600"><br>
+    <img src="grafik2.png" width="600"><br>
+    <img src="grafik3.png" width="600"><br>
+    <img src="grafik4.png" width="600"><br>
+    <img src="grafik5.png" width="600"><br>
+</body>
+</html>
